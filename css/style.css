@@ -74,10 +74,12 @@ button:focus{
 
 /* header */
 .header{
-  background-color: var(--color-black);
-  color: var(--color-text);
   position: fixed; /* 뷰포트 최상단에 위치 */
+  max-width: var(--size-max-width);
+  background-color: var(--color-black);
   top:0;
+  left: 50%; 
+  transform: translateX(-50%); /* 헤더가  뷰포트를 기준으로 왼쪽에서 50% 정도 떨어져 있는 상태에서 왼쪽으로 50%만큼 이동하여 가운데로 배치해줌.*/
   width: 100%;
   padding: 1rem;
   display: flex;
@@ -169,7 +171,6 @@ button:focus{
   border-radius: 1rem;
   cursor: default;
   box-shadow: 0px 10px 1px rgba(221, 221, 221, 1), 0 10px 20px rgba(204, 204, 204, 1); /* https://manuarora.in/boxshadows 에서 추출 */
-  
 }
 .major__icon{
   font-size: 4rem;
@@ -203,4 +204,58 @@ button:focus{
 .job__period{
   color: var(--color-primary);
   font-size: 0.8rem;
+}
+
+/* skills */
+#skills{
+  background-color: var(--color-primary-variant);
+  color: var(--color-text);
+}
+
+.skills__container{
+  display: grid;
+  grid-template-columns: 6fr 4fr; /* 열의 비율을 6:4로 설정  */
+  margin: 2rem 3rem;
+  border-radius: 8px;
+  overflow: hidden; /* border를 설정해주더라도 그 안의 자식 요소들은 (coding, tools, etc) 여전히 각 진 상태에서 backgounrd 속성을 가지고 있기 때문에 자식 요소들이 부모 요소인 skills__container를 넘치고 있는 상황이라 overflow로 자식 요소들을 숨김 처리함*/
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12)
+}
+.skills__title{
+  color: var(--color-accent);
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+.skills__coding{
+   grid-row: span 2; /* 해당 grid 영역을 전체 그리드 영역에서 두 줄을 차지하겠다는 의미 */
+   padding: 1rem;
+   background-color: var(--color-primary);
+}
+.skills__tools{
+  padding: 1rem;
+}
+.skills__etc{
+  padding: 1rem;
+  background-color: var(--color-primary);
+  filter: brightness(150%);
+}
+
+.bar{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+.bar__metadata{
+  display: flex;
+  justify-content: space-between;
+}
+
+.bar__bg{ /* 막대바의 배경 */
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-primary-variant);
+}
+.bar__value{ /* 막대바*/
+  height: 3px;
+  background-color: var(--color-accent);
 }
