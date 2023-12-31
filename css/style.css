@@ -1,6 +1,7 @@
 /* 기본 세팅 */
 :root{
 
+  /* colors */
   --color-primary: var(--color-black);
   --color-primary-variant: var(--color-gray);
   --color-accent: var(--color-blue);
@@ -12,6 +13,10 @@
   --color-blue: #03e8f9;
   --color-orange: #fd6413;
   --color-gray: #1b1e26;
+
+  /* size */
+
+  --size-max-width: 1200px;
 }
 
 * {
@@ -30,8 +35,7 @@ h1, h2, h3, p, ul{
 
 ul{
   list-style: none; /* 점 목록 제거 */
-  padding: none; /* 점 목록에 존재했던 왼쪽 패딩 제거 */
-  
+  padding: 0; /* 점 목록에 존재했던 왼쪽 패딩 제거 */
 }
 
 a{
@@ -61,6 +65,11 @@ button:focus{
 .description{
   font-size: 1.5rem;
   margin: 0.5rem 0;
+}
+.max-container{
+  max-width: var(--size-max-width); /* 각 섹션들의 최대 넓이를 1200px(--size-max-width)로 설정 */
+  margin: auto; /* 각 섹션마다 마진을 auto로 주면서 해당 영역을 가운데 배치시킴 */
+  
 }
 
 /* header */
@@ -144,4 +153,54 @@ button:focus{
   background-color: transparent;
   outline: 2px solid var(--color-accent); /* border를 주지 않는 이유는, 버튼 자체에 height 속성을 주지 않아서 기본적인 텍스트의 크기를 유지하고 있다가, hover 되었을 때 적용되는 border의 크기가 들어오기 때문에 그 만큼 컨텐츠가 밀림. 그래서 outline을 줌으로서 외부를 밀지 않고 겹치도록 윤곽선을 주는 것임.*/
   color: var(--color-text);
+}
+
+/* about */
+.majors{
+  display: flex;
+  justify-content: space-between ;
+  gap: 1rem;
+  margin: 2.5rem 0;
+}
+.major{
+  background-color: var(--color-primary-variant);
+  padding: 2rem 1rem;
+  color: var(--color-text);
+  border-radius: 1rem;
+  cursor: default;
+  box-shadow: 0px 10px 1px rgba(221, 221, 221, 1), 0 10px 20px rgba(204, 204, 204, 1); /* https://manuarora.in/boxshadows 에서 추출 */
+  
+}
+.major__icon{
+  font-size: 4rem;
+  margin: 1rem 0;
+  color: var(--color-accent);
+  transition: all 300ms ease;
+}
+.major__icon:hover{
+  transform: rotate(-15deg) scale(1.2);
+}
+.major-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.jobs{
+  text-align: start ;
+}
+
+.job{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+.job__name{
+  color: var(--color-primary);
+}
+
+.job__period{
+  color: var(--color-primary);
+  font-size: 0.8rem;
 }
