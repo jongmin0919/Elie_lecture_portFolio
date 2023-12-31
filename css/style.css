@@ -49,6 +49,20 @@ button:focus{
   outline: 1px solid var(--color-accent);
 }
 
+/* common (공통적으로 적용되는 태그들의 속성)*/
+.section{
+  padding: 4rem;
+  text-align: center;
+}
+.title{
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+.description{
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
 /* header */
 .header{
   background-color: var(--color-black);
@@ -128,6 +142,6 @@ button:focus{
 }
 .home__contact__button:hover{
   background-color: transparent;
-  border: 2px solid var(--color-accent); /* border를 주지 않는 이유는, 버튼 자체에 height 속성을 주지 않아서 기본적인 텍스트의 크기를 유지하고 있다가, hover 되었을 때 적용되는 border의 크기가 들어오기 때문에 그 만큼 컨텐츠가 밀림. 그래서 outline을 줌으로서 외부를 밀지 않고 겹치도록 윤곽선을 주는 것임.*/
+  outline: 2px solid var(--color-accent); /* border를 주지 않는 이유는, 버튼 자체에 height 속성을 주지 않아서 기본적인 텍스트의 크기를 유지하고 있다가, hover 되었을 때 적용되는 border의 크기가 들어오기 때문에 그 만큼 컨텐츠가 밀림. 그래서 outline을 줌으로서 외부를 밀지 않고 겹치도록 윤곽선을 주는 것임.*/
   color: var(--color-text);
 }
