@@ -28,20 +28,22 @@
 <body>
   <!-- Header -->
   <header class="header">
-    <div class="header__logo">
-      <img class="header__logo__img" src="./images/favicon.ico" alt="logo">
-      <h1 class="header__logo__title"><a href="#">Re_Go</a></h1>
+      <div class="header__container">
+        <div class="header__logo">
+          <img class="header__logo__img" src="./images/favicon.ico" alt="logo">
+          <h1 class="header__logo__title"><a href="#">Re_Go</a></h1>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li><a class = "header__menu__item active" href="#home">Home</a></li>
+            <li><a class = "header__menu__item" href="#about">About</a></li>
+            <li><a class = "header__menu__item" href="#skills">Skills</a></li>
+            <li><a class = "header__menu__item" href="#work">My work</a></li>
+            <li><a class = "header__menu__item" href="#testimonial">Testimonial</a></li>
+            <li><a class = "header__menu__item" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
     </div>
-    <nav>
-      <ul class="header__menu">
-        <li><a class = "header__menu__item active" href="#home">Home</a></li>
-        <li><a class = "header__menu__item" href="#about">About</a></li>
-        <li><a class = "header__menu__item" href="#skills">Skills</a></li>
-        <li><a class = "header__menu__item" href="#work">My work</a></li>
-        <li><a class = "header__menu__item" href="#testimonial">Testimonial</a></li>
-        <li><a class = "header__menu__item" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
   </header>
   <!-- Main -->
   <main>
@@ -149,104 +151,108 @@
     </section>
     <!-- Work -->
     <section id = "work" class="section">
-      <h2 class="title">My Work</h2>
+      <div class="max-container">
+        <h2 class="title">My Work</h2>
       <p class="description">Projects</p>
-      <ul>
-        <li><button>All<span>8</span></button></li>
-        <li><button>Front-End<span>3</span></button></li>
-        <li><button>Back-End<span>3</span></button></li>
-        <li><button>Mobile<span>2</span></button></li>
+      <ul class="categories">
+        <li><button class="category category--selected">All<span class = "category__count">8</span></button></li>
+        <li><button class="category">Front-End<span class = "category__count">3</span></button></li>
+        <li><button class="category">Back-End<span class = "category__count">3</span></button></li>
+        <li><button class="category">Mobile<span class = "category__count">2</span></button></li>
       </ul>
-      <ul>
-        <li><a href="#" target = "_blank">
-          <img src="images/portfolio-other-images/projects/project1.webp" alt="">
-          <div>
-            <h3>Project #1</h3>
+      <ul class="projects">
+        <li class = "project"><a href="#" target = "_blank">
+          <img src="images/portfolio-other-images/projects/project1.webp" alt="" class = "project__img">
+          <div class = "project__metadata">
+            <h3 class="project__title">Project #1</h3>
             <p>Clone Coding with HTML, CSS</p>
           </div>
         </a></li>
-        <li><a href="#" target = "_blank">
-          <img src="images/portfolio-other-images/projects/project2.webp" alt="">
-          <div>
-            <h3>Project #1</h3>
+        <li class = "project"><a href="#" target = "_blank">
+          <img src="images/portfolio-other-images/projects/project2.webp" alt="" class = "project__img">
+          <div class = "project__metadata">
+            <h3 class="project__title">Project #1</h3>
             <p>Clone Coding with HTML, CSS</p>
           </div>
         </a></li>
-        <li><a href="#" target = "_blank">
-          <img src="images/portfolio-other-images/projects/project3.webp" alt="">
-          <div>
-            <h3>Project #1</h3>
+        <li class = "project"><a href="#" target = "_blank">
+          <img src="images/portfolio-other-images/projects/project3.webp" alt="" class = "project__img">
+          <div class = "project__metadata">
+            <h3 class="project__title">Project #1</h3>
             <p>Clone Coding with HTML, CSS</p>
           </div>
         </a></li>
-        <li><a href="#" target = "_blank">
-          <img src="images/portfolio-other-images/projects/project4.webp" alt="">
-          <div>
-            <h3>Project #1</h3>
+        <li class = "project"><a href="#" target = "_blank">
+          <img src="images/portfolio-other-images/projects/project4.webp" alt="" class = "project__img">
+          <div class = "project__metadata">
+            <h3 class="project__title">Project #1</h3>
             <p>Clone Coding with HTML, CSS</p>
           </div>
         </a></li>
-        <li><a href="#" target = "_blank">
-          <img src="images/portfolio-other-images/projects/project5.webp" alt="">
-          <div>
-            <h3>Project #1</h3>
+        <li class = "project"><a href="#" target = "_blank">
+          <img src="images/portfolio-other-images/projects/project5.webp" alt="" class = "project__img">
+          <div class = "project__metadata">
+            <h3 class="project__title">Project #1</h3>
             <p>Clone Coding with HTML, CSS</p>
           </div>
         </a></li>
-        <li><a href="#" target = "_blank">
-          <img src="images/portfolio-other-images/projects/project6.webp" alt="">
-          <div>
-            <h3>Project #1</h3>
+        <li class = "project"><a href="#" target = "_blank">
+          <img src="images/portfolio-other-images/projects/project6.webp" alt="" class = "project__img">
+          <div class = "project__metadata">
+            <h3 class="project__title">Project #1</h3>
             <p>Clone Coding with HTML, CSS</p>
           </div>
         </a></li>
-        <li><a href="#" target = "_blank">
-          <img src="images/portfolio-other-images/projects/project7.webp" alt="">
-          <div>
-            <h3>Project #1</h3>
+        <li class = "project"><a href="#" target = "_blank">
+          <img src="images/portfolio-other-images/projects/project7.webp" alt="" class = "project__img">
+          <div class = "project__metadata">
+            <h3 class="project__title">Project #1</h3>
             <p>Clone Coding with HTML, CSS</p>
           </div>
         </a></li>
-        <li><a href="#" target = "_blank">
-          <img src="images/portfolio-other-images/projects/project8.webp" alt="">
-          <div>
-            <h3>Project #1</h3>
+        <li class = "project"><a href="#" target = "_blank">
+          <img src="images/portfolio-other-images/projects/project8.webp" alt="" class = "project__img">
+          <div class = "project__metadata">
+            <h3 class="project__title">Project #1</h3>
             <p>Clone Coding with HTML, CSS</p>
           </div>
         </a></li>
         
       </ul>
+      </div>
     </section>
     <!-- Testimonial -->
-    <section id = "testimonial" class="section">
+    <section id = "testimonial" class="section max-container">
       <h2 class="title">Testimonial</h2>
       <p class="description">See What they say about me</p>
-      <ul>
-        <li><img src="images/portfolio-other-images/testimonials/people1.webp" alt="">
-          <div><p>they recommand me1</p><p><a href="#">James Kim</a> / google</p></div>
+      <ul class="testimonials">
+        <li class="testimonial"><img src="images/portfolio-other-images/testimonials/people1.webp" alt="" class="testimonial__img">
+          <div class="testimonial__bubble"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem impedit alias consequuntur? Quia, rem obcaecati voluptate adipisci repudiandae provident. Earum, ad sapiente ex aliquid totam porro repellat reiciendis dolores maxime!</p><p><a href="#" class="testimonial__bubble__name">James Kim</a> / google</p></div>
         </li>
-        <li><img src="images/portfolio-other-images/testimonials/people2.webp" alt="">
-          <div><p>they recommand me1</p><p><a href="#">Anna Jin</a> / Samsung</p></div>
+        <li class="testimonial"><img src="images/portfolio-other-images/testimonials/people2.webp" alt="" class="testimonial__img">
+          <div class="testimonial__bubble"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, doloremque! Debitis quibusdam nulla aut nam nobis perferendis quisquam quos non aliquid, tenetur sit minus adipisci vitae ad dolorem harum saepe.</p><p><a href="#" class="testimonial__bubble__name">Anna Jin</a> / Samsung</p></div>
         </li>
-        <li><img src="images/portfolio-other-images/testimonials/people3.webp" alt="">
-          <div><p>they recommand me1</p><p><a href="#">Anna Jin</a> / Samsung</p></div>
+        <li class="testimonial"><img src="images/portfolio-other-images/testimonials/people3.webp" alt="" class="testimonial__img">
+          <div class="testimonial__bubble"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium libero possimus voluptatum magnam. Voluptatibus error odio minima suscipit nobis possimus dignissimos veniam, labore sunt eveniet sequi voluptatem! Laboriosam, ad voluptate.</p><p><a href="#" class="testimonial__bubble__name">Anna Jin</a> / Samsung</p></div>
         </li>
       </ul>
     </section>
     <!-- Arrow Up -->
     <aside>
-      <a href="#home" title="back to top"><i class="fa-solid fa-arrow-up"></i></a>
+      <a class="arrow__up" href="#home" title="back to top"><i class="fa-solid fa-arrow-up"></i></a>
     </aside>
   </main>
   <!-- Footer -->
-  <footer id = "contact">
-    <h2>Let&#39;s talk</h2>
-    <p>jongmin0919@naver.com</p>
-    <ul>
-      <li><a href="https://youtube.com/@Re_Go?si=CjE1vEJU_BQE4OAR" target = "_blank" title="my youtube link"><i class="fa-brands fa-youtube"></i></a></li>
-      <li><a href="https://github.com/jongmin0919" target = "_blank" title="my github link"><i class="fa-brands fa-github"></i></a></li>
-    </ul>
-    <p>© 다시가리 - All right reserved</p>
+  <footer id = "contact" class="section">
+    <div class="max-container" >
+      <h2 class = "title">Let&#39;s talk</h2>
+      <p class = "description">jongmin0919@naver.com</p>
+      <ul class="contact__links">
+        <li><a class="contact__link" href="https://youtube.com/@Re_Go?si=CjE1vEJU_BQE4OAR" target = "_blank" title="my youtube link"><i class="fa-brands fa-youtube"></i></a></li>
+        <li><a class="contact__link" href="https://github.com/jongmin0919" target = "_blank" title="my github link"><i class="fa-brands fa-github"></i></a></li>
+      </ul>
+      <p>© 다시가리 - All right reserved</p>
+    </div>
   </footer>
 </body>
 </html>
