@@ -5,7 +5,7 @@
   --color-primary-variant: var(--color-gray);
   --color-accent: var(--color-blue);
   --color-accent-variant: var(--color-orange);
-  --color-text: var(--color-whilte);
+  --color-text: var(--color-white);
 
   --color-white: #fff;
   --color-black: #050a13;
@@ -21,6 +21,7 @@
 
 body{
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
 }
 
 h1, h2, h3, p, ul{
@@ -46,4 +47,87 @@ button{
 
 button:focus{
   outline: 1px solid var(--color-accent);
+}
+
+/* header */
+.header{
+  background-color: var(--color-black);
+  color: var(--color-text);
+  position: fixed; /* 뷰포트 최상단에 위치 */
+  top:0;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header__logo__img{
+   width: 32px;
+   height: 32px;
+}
+.header__logo__title{
+  font-size: 1.8rem; /* 기본적으로 설정되어 있는 브라우저의 기본 폰트 사이즈의 1.8배 크기 */ 
+}
+
+.header__menu{
+  display: flex;
+  gap: 4px;
+}
+.header__menu__item{
+  padding: 8px 16px;
+}
+
+.header__menu__item:hover{
+  border-bottom: 1px solid var(--color-blue);
+}
+
+.header__menu__item.active{
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+}
+
+/* home */
+#home{
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 5rem 1rem;
+  padding-top: 7rem;
+  text-align: center;
+}
+
+.home__avatar{
+  width: 250px;
+  height: 250px;
+  object-fit: cover; /* 이미지가 깨졌을 때 원래 비율을 유지(cover)*/
+  border: 3px solid var(--color-accent);
+  border-radius: 100%;
+}
+.home__title{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.home__title--strong{
+  color: var(--color-accent);
+}
+.home__description{
+  font-size: 1.3rem;
+}
+.home__contact__button{
+  display: inline-block; /* a 태그는 inline 속성이라 마진을 주어도 적용이 안되서 display를 inline_block으로 설정하여 마진 적용*/
+  background-color: var(--color-accent);
+  color: var(--color-black);
+  padding: 0.5rem 1rem;
+  margin: 2rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+.home__contact__button:hover{
+  background-color: transparent;
+  border: 2px solid var(--color-accent); /* border를 주지 않는 이유는, 버튼 자체에 height 속성을 주지 않아서 기본적인 텍스트의 크기를 유지하고 있다가, hover 되었을 때 적용되는 border의 크기가 들어오기 때문에 그 만큼 컨텐츠가 밀림. 그래서 outline을 줌으로서 외부를 밀지 않고 겹치도록 윤곽선을 주는 것임.*/
+  color: var(--color-text);
 }
