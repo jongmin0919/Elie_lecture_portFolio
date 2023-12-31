@@ -1,0 +1,49 @@
+/* 기본 세팅 */
+:root{
+
+  --color-primary: var(--color-black);
+  --color-primary-variant: var(--color-gray);
+  --color-accent: var(--color-blue);
+  --color-accent-variant: var(--color-orange);
+  --color-text: var(--color-whilte);
+
+  --color-white: #fff;
+  --color-black: #050a13;
+  --color-blue: #03e8f9;
+  --color-orange: #fd6413;
+  --color-gray: #1b1e26;
+}
+
+* {
+  box-sizing: border-box; /* 각 요소의 넓이를 직관적으로 확인하도록 패딩과 보더를 콘텐츠 넓이에 포함시킴 */ 
+  
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, p, ul{
+  margin: 0;
+}
+
+ul{
+  list-style: none; /* 점 목록 제거 */
+  padding: none; /* 점 목록에 존재했던 왼쪽 패딩 제거 */
+  
+}
+
+a{
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+button{
+  background-color: transparent;
+  outline: 0; /* 포커스 된 상태에서 나타나는 기본적인 외곽선 제거 */
+  border: 0;
+}
+
+button:focus{
+  outline: 1px solid var(--color-accent);
+}
