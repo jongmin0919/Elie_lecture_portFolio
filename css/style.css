@@ -73,14 +73,18 @@ button:focus{
 
 /* header */
 .header{
-  background-color: var(--color-black);
+  background-color: transparent;
   position: fixed;
   z-index: 1; /* 헤더를 최우선으로 화면 앞에 나오도록 */
+  transition: all 300ms ease;
+}
+.header--dark{
+  background-color: var(--color-primary);
 }
 .header__container{
   max-width: 1200px;
   position: fixed; /* 뷰포트 최상단에 위치 */
-  background-color: var(--color-black);
+  background-color: transparent;
   top:0;
   left: 50%; 
   transform: translateX(-50%); /* 헤더가  뷰포트를 기준으로 왼쪽에서 50% 정도 떨어져 있는 상태에서 왼쪽으로 50%만큼 이동하여 가운데로 배치해줌.*/
