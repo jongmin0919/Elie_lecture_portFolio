@@ -50,7 +50,7 @@ button{
 }
 
 button:focus{
-  outline: 1px solid var(--color-accent);
+  outline: 1px solid transparent;
 }
 
 /* common (공통적으로 적용되는 태그들의 속성)*/
@@ -73,26 +73,19 @@ button:focus{
 
 /* header */
 .header{
-  background-color: transparent;
-  position: fixed;
-  z-index: 1; /* 헤더를 최우선으로 화면 앞에 나오도록 */
-  transition: all 300ms ease;
-}
-.header--dark{
-  background-color: var(--color-primary);
-}
-.header__container{
-  max-width: 1200px;
   position: fixed; /* 뷰포트 최상단에 위치 */
   background-color: transparent;
   top:0;
-  left: 50%; 
-  transform: translateX(-50%); /* 헤더가  뷰포트를 기준으로 왼쪽에서 50% 정도 떨어져 있는 상태에서 왼쪽으로 50%만큼 이동하여 가운데로 배치해줌.*/
   width: 100%;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
+  transition: all 300ms ease;
+}
+.header--dark{
+  background-color: var(--color-primary);
 }
 .header__logo{
   display: flex;
@@ -106,13 +99,22 @@ button:focus{
 .header__logo__title{
   font-size: 1.8rem; /* 기본적으로 설정되어 있는 브라우저의 기본 폰트 사이즈의 1.8배 크기 */ 
 }
-
+.header__toggle{
+  display: none;
+  color:  var(--color-white);
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1.3rem;
+  right: 1rem;
+}
 .header__menu{
   display: flex;
-  gap: 4px;
+  gap: 4px; 
 }
 .header__menu__item{
+  display: block;
   padding: 8px 16px;
+  border-bottom: 1px solid transparent;
 }
 
 .header__menu__item:hover{
@@ -131,6 +133,7 @@ button:focus{
   padding: 5rem 1rem;
   padding-top: 7rem;
   text-align: center;
+  transition: all 1000ms ease;
 }
 
 .home__avatar{
@@ -321,6 +324,11 @@ button:focus{
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
+  transition: all 250ms ease-out;
+}
+.projects.animation--out{
+  opacity: 0;
+  transform: scale(0.96) translateY(20px);
 }
 .project{
   position: relative;
@@ -408,6 +416,7 @@ button:focus{
   border-radius: 100%;
   text-align: center;
   box-shadow: 5px 5px 0px 0px var(--color-accent);
+  transition: all 300ms ease;
 }
 
 /* footer */
@@ -436,7 +445,7 @@ button:focus{
 
 @media screen and (max-width: 768px){
   .section{
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
   }
   .title{
     font-size: 2rem;
@@ -445,15 +454,23 @@ button:focus{
     font-size: 1rem;
   }
 
-  .header__container{
+  .header{
     flex-direction: column;
     align-items: start;
+    background-color: var(--color-primary);
+  }
+  .header__toggle{
+    display: block;
   }
   .header__menu{
+    display: none;
     flex-direction: column;
     text-align: center;
-    padding: 1rem 4rem;
+    margin: 1rem 4rem;
     gap: 1rem;
+  }
+  .header__menu.open{
+    display: flex;
   }
   .header__nav{
     width: 100%;
